@@ -35,6 +35,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  diacritic: ^0.1.6
 
 dev_dependencies:
   flutter_test:
@@ -63,28 +64,7 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/francia_final.jpg
-    - assets/goles_messi.jpg
-    - assets/messi_goles.jpg
-    - assets/correct_answer.jpg
-    - assets/incorrect_answer.jpg
-    - assets/chile-comida.jpg
-    - assets/chile1.jpg
-    - assets/chile-nieve.jpg
-    - assets/carilo2021.jpg
-    - assets/carilo2021-2.jpg
-    - assets/jani.jpg
-    - assets/linda1.jpg
-    - assets/linda2.jpg
-    - assets/linda3.jpg
-    - assets/recel.jpg
-    - assets/recyo.jpg
-    - assets/cam.jpg
-    - assets/camilo.jpg
-    - assets/sl.jpg
-    - assets/sl2.jpg
-    - assets/meli.jpg
-    - assets/san-cristobal.jpg
+    - assets/
 
 
 
