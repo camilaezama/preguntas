@@ -225,6 +225,15 @@ class _QuizScreenState extends State<QuizScreen> {
       "correctMessage": "¡Siiiiii!",
       "incorrectMessage": "Incorrecto... Miramar en marzo 2022!!",
     },
+        {
+      "question": "Y esta donde es?",
+      "answer": "Carilo",
+      "type": "completar",
+      "questionImage": "assets/carilo2021-2.jpg", // Imagen para la pregunta
+      "image": "assets/carilo2021.jpg", // Imagen para la respuesta
+      "correctMessage": "Siii Carilo con tu familia en 2021",
+      "incorrectMessage": "Incorrecto... Carilo con tu familia en 2021",
+    },
     {
       "question":
           "Ahora preguntas del viaje a disney.. En que parque comimos esto?",
@@ -510,22 +519,31 @@ class ResultScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const Icon(Icons.favorite, size: 100, color: Colors.white),
+            const SizedBox(height: 20),
+            Text(
+              "Respondiste $correctAnswers de $totalAnswers preguntas correctamente.",
+              style: const TextStyle(fontSize: 18, color: Colors.white),
+            ),
+            const SizedBox(height: 40),
             const Text(
-              "¡Te ganaste la camiseta, felicitaciones! 🎉",
+              "Tu nota es dudosa",
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 20),
-            Text(
-              "Respondiste $correctAnswers de $totalAnswers preguntas correctamente.",
-              style: const TextStyle(fontSize: 18, color: Colors.white),
-            ),
-            const SizedBox(height: 20),
-            const Icon(Icons.sports_soccer, size: 100, color: Colors.white),
+            const SizedBox(height: 20),            
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
+                "Te recomiendo comunicarte con la catedra para negociar el aprobado",
+                style: TextStyle(fontSize: 18, color: Colors.white),
+              ),
+            ),            
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () =>
