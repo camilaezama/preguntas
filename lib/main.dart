@@ -117,15 +117,18 @@ class _IntroScreenState extends State<IntroScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   // Mostrar el texto del mensaje actual
-                  Text(
-                    messages[step]['text'],
-                    key: ValueKey(step),
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Text(
+                      messages[step]['text'],
+                      key: ValueKey(step),
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 20),
                   // Mostrar la imagen si está presente
@@ -380,20 +383,23 @@ class _QuizScreenState extends State<QuizScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "${questionIndex + 1} : ${currentQuestion["question"]}", // currentQuestion["question"],
-              style: const TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-              textAlign: TextAlign.center,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: Text(
+                "${questionIndex + 1} : ${currentQuestion["question"]}", // currentQuestion["question"],
+                style: const TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
             ),
             // Mostrar imagen de la pregunta
             if (currentQuestion["questionImage"] != null)
               Image.asset(
                 currentQuestion["questionImage"],
-                width: 200,
-                height: 200,
+                width: 300,
+                height: 300,
               ),
             const SizedBox(height: 20),
             if (currentQuestion["type"] == "opcionesMultiples")
@@ -486,16 +492,19 @@ class AnswerScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  message,
-                  style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                  textAlign: TextAlign.center,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Text(
+                    message,
+                    style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 const SizedBox(height: 20),
-                Image.asset(imagePath, width: 200, height: 200),
+                Image.asset(imagePath, width: 300, height: 300),
               ],
             ),
           ),
